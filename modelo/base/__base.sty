@@ -1,0 +1,110 @@
+% modelo IFSC artigo - não usar diretamente
+\NeedsTeXFormat{LaTeX2e}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[portuges,brazilian]{babel}
+\RequirePackage{setspace}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{mathrsfs}
+\RequirePackage{lastpage}
+\RequirePackage{listings}
+\RequirePackage[dvipsnames, xcdraw, table]{xcolor}
+\RequirePackage{graphicx}
+\RequirePackage{pdflscape}
+\RequirePackage{epstopdf}
+\RequirePackage{enumerate}
+\RequirePackage{multirow}
+\RequirePackage{indentfirst}
+\RequirePackage{fancyhdr}
+\RequirePackage{sectsty}
+\RequirePackage{colortbl}
+\RequirePackage{slashbox}
+\RequirePackage{tabularx}
+\RequirePackage{mdframed}
+\RequirePackage[pdftex,pdfborder={0 0 0}]{hyperref}
+\RequirePackage{ae}
+\RequirePackage{pgfplots}
+\RequirePackage{tikz}
+\RequirePackage{enumitem}
+
+\definecolor{code_bg}{rgb}{0.98, 0.98, 0.9}
+\definecolor{console_bg}{rgb}{0.92, 0.95, 0.95}
+
+
+%cusmom colors
+\definecolor{mygreen}{RGB}{28,172,0}
+\definecolor{c_keywords}{RGB}{170,55,241}
+\definecolor{c_strings}{RGB}{170,55,241}
+\definecolor{c_numbers}{rgb}{0.5,0.5,0.5}
+\definecolor{c_backgrount}{rgb}{0.98,0.98,0.9}
+\definecolor{c_comments}{rgb}{0.0,0.4,0.0}
+
+%aspecto visual de codigo matlab
+\lstset{language=Matlab,%
+    basicstyle      =   {\small\ttfamily},
+    aboveskip       =   3mm,
+    belowskip       =   3mm,
+    breaklines      =   true,
+    keywordstyle    =   [1]\color{blue},
+    keywordstyle    =   [2]\color{c_keywords},
+    keywordstyle    =   [3]\color{red},
+    identifierstyle =   ,
+    commentstyle    =   \color{c_comments},
+    morekeywords    =   {xlim,ylim,var,alpha,factorial,poissrnd,normpdf,normcdf},
+    morekeywords    =   [2]{on, off, interp},
+    morekeywords    =   [3]{},
+    morecomment     =   [l][\color{Blue}]{...},
+    stringstyle     =   \color{c_strings},
+    showstringspaces=   false,
+    numbers         =   left,
+    numberstyle     =   {\scriptsize \color{c_numbers}},
+    numbersep       =   7pt,
+    emph            =   [1]{if, elseif, else, for, while, end, endif, endfor, endwhile, endfunction, break},
+    emphstyle       =   [1]\color{blue}\bfseries,
+    %emph           =   [2]{forma},emphstyle=[2]\color{red}\bfseries, %some words to emphasise
+    rulecolor       =   \color{gray},
+    backgroundcolor =   \color{c_backgrount},
+    frameround      =   ffff,  %fttt
+}
+\renewcommand{\ttdefault}{pcr}
+
+
+%layout da página  (https://en.wikibooks.org/wiki/LaTeX/Page_Layout)
+\setlength{\evensidemargin} {0mm}    %3
+\setlength{\topmargin}      {15mm}   %4
+\setlength{\headheight}     {19mm}   %5
+\setlength{\headsep}        {6mm}    %6
+\setlength{\textheight}     {225mm}  %7
+\setlength{\textwidth}      {152mm}  %8
+\setlength{\marginparsep}   {0mm}    %9
+\setlength{\marginparwidth} {0mm}    %10
+\setlength{\footskip}       {15mm}   %11
+\setlength{\marginparpush}  {0mm}    %12
+\setlength{\hoffset}        {-15mm}  %13
+\setlength{\voffset}        {-1in}   %14
+\setlength{\paperwidth}     {200mm}  %15
+\setlength{\paperheight}    {297mm}  %16
+
+
+
+% campos e comandos para capa, cabeçalho e rodapé
+\newcommand{\thetitle}{\@title}
+\newcommand{\theauthor}{\@author}
+\newcommand{\@subject}{}            \newcommand{\subject}[1]{\renewcommand{\@subject}{#1}}          \newcommand{\thesubject}{\@subject}
+\newcommand{\@course}{}             \newcommand{\course}[1]{\renewcommand{\@course}{#1}}            \newcommand{\thecourse}{\@course}
+\newcommand{\@subtitle}{}          \newcommand{\subtitle}[1]{\renewcommand{\@subtitle}{#1}}         \newcommand{\thesubtitle}{\@subtitle}
+\newcommand{\@shorttitle}{}         \newcommand{\shorttitle}[1]{\renewcommand{\@shorttitle}{#1}}
+
+\newcommand{\@cabecalho}{}          \newcommand{\cabecalho}[1]{\renewcommand{\@cabecalho}{#1}}
+\renewcommand{\maketitle}{\capa}    \newcommand{\eq}[1]{(\ref{#1})}
+
+% refs
+\newcommand{\figr}[1]{Figura~\ref{#1}}
+\newcommand{\tabr}[1]{Tabela~\ref{#1}}
+\newcommand{\secr}[1]{Se\c{c}\~ao~\ref{#1}}
+\newcommand{\eqr}[1]{(\ref{#1})}
+
+% math
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}

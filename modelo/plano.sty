@@ -1,0 +1,58 @@
+% modelo IFSC questionário
+\usepackage{../modelo/base/__base}
+\usepackage{titlesec}
+
+
+
+%seção
+%\titleformat{\section}[runin]{\large\bfseries}{\thesection}{0.5em}{}
+%\sectionfont{\sectionrule{0ex}{0pt}{0ex}{0pt}}
+%\makeatletter \def\@seccntformat#1{Questão \csname the#1\endcsname:\quad}
+%\sectionfont{\sectionrule{0ex}{0pt}{-1ex}{0.0pt}}
+%\makeatletter \def\@seccntformat#1{\csname the#1\endcsname:\quad}
+
+
+
+%cabeçalho e rodapé
+%\renewcommand{\headrulewidth}{.5pt}
+\renewcommand{\footrulewidth}{.5pt}
+\lhead{\includegraphics[scale=0.24]{../modelo/base/ifsc} \noindent\rule[2ex]{\linewidth}{.50pt}}
+\chead{
+\begin{minipage}{.78\textwidth} \small
+\begin{flushleft}
+\@cabecalho
+\end{flushleft}
+\end{minipage} \\ \vspace{2mm}
+}
+\rhead{}
+\lfoot{\footnotesize{Unidade Curricular: \@subject \\ Curso: \@course \\ Professor: \theauthor}}
+\cfoot{}
+\rfoot{\footnotesize{ \ \@date \\ P\'agina \thepage  \ de  \pageref{LastPage}}}
+\renewcommand{\headrulewidth}{0pt}
+
+
+
+
+
+
+%--  Capa  --------------------------------------------------------------------
+
+%capa
+\cabecalho{
+    \textsc{Ministério da Educação\\
+        Secretaria de Educação Profissional e Tecnológica\\
+        Instituto Federal de Educação, Ciência e Tecnologia de Santa Catarina\\
+        {Campus} Florianópolis --- Departamento Acadêmico de Eletrotécnica
+    }
+}
+
+\newcommand{\capa}{
+    \begin{center}
+        \large\textbf{\@title} \\
+        \small\textbf{\@subtitle} \\
+        \vspace{4mm}
+    \end{center}
+
+    \pagestyle{fancy}
+
+    }

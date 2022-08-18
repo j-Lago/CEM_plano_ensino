@@ -1,0 +1,169 @@
+%! Author = j-Lago
+%! Date = 29-Mar-22
+%! suppress = Unicode
+
+% preamble
+\documentclass[10pt, a4paper]{article}
+\usepackage{../modelo/plano}
+\usepackage{wrapfig}
+%\usepackage{pythontex}
+\usepackage[normalem]{ulem}
+\usepackage{hhline}
+
+\usepackage{etoolbox}
+
+\ifx\conditionmacro\undefined
+    \immediate\write18{pdflatex -jobname= "eeln"  -output-directory="../out/" "\gdef\string\conditionmacro{eeln}\string\input\space\jobname"}
+    \immediate\write18{pdflatex -jobname= "eel"   -output-directory="../out/" "\gdef\string\conditionmacro{eel}\string\input\space\jobname"}
+\expandafter\stop
+\fi
+
+
+\def\eeln{eeln}
+
+
+\ifx\conditionmacro\eeln
+    \subject{(CEE22106) Conversão Eletromecânica da Energia I}
+    \course{Engenharia Eletrônica}
+\else
+    \subject{(CEM22005) Conversão Eletromecânica de Energia I}
+    \course{Engenharia Elétrica}
+\fi
+
+\author{Jackson Lago, Dr. Eng.}
+\title{Plano de Ensino}
+
+
+\subtitle{\thesubject}
+\shorttitle{\thetitle}
+\date{\today}
+
+% document
+\begin{document}
+
+    \capa
+
+    %\onehalfspacing
+    \setstretch{1.2}
+
+
+    \subsection*{Metodologia}
+
+    Aulas expositivas, dialogadas e práticas.
+
+    \hspace{3mm}
+
+
+    $\dagger$ \emph{Excepcionalmente nesse semestre, devido às restrições decorrentes da pandemia do COVID--19 e para complementação do curto calendário
+    acadêmico 2022.2, parte das aulas serão ministradas na modalidade não presencial (ANP), em acordo com a regulamentação vigente no IFSC
+    campus Florianópolis.}
+
+    \subsection*{Ementa}
+    \begin{enumerate}[label=\roman*)]
+        \item Transformadores monofásicos, trifásicos e autotransformadores;
+        \item Motores de indução trifásicos e monofásicos;
+        \item Motores especiais: motor universal, motor com espira de sombra, motor a imã permanente e motor de passo.
+    \end{enumerate}
+
+
+    \subsection*{Competências}
+
+    Compreender o funcionamento de máquinas elétricas a partir dos fenômenos eletromagnéticos, da análise de seus circuitos equivalentes e
+    de ensaios práticos.
+
+
+    \subsection*{Habilidades}
+    \begin{enumerate}[label=\roman*)]
+        \item Analisar e descrever os elementos construtivos básicos dos transformadores, motores de indução e motores
+especiais;
+        \item Analisar e descrever os fenômenos eletromagnéticos nos quais se baseiam o funcionamento dos transformadores,
+motores de indução e motores especiais;
+        \item Analisar e descrever as características operativas dos transformadores, motores de indução e motores especiais,
+para diferentes condições de operação;
+        \item Calcular os valores das grandezas características do funcionamento de transformadores, motores de indução e
+motores especiais, utilizando os respectivos circuitos equivalentes;
+        \item Realizar ensaios e outras observações práticas visando medir e calcular os valores das grandezas características do
+funcionamento de transformadores, motores de indução e motores especiais.
+    \end{enumerate}
+
+    \subsection*{Requisitos}
+    \begin{itemize}
+        \item Eletromagnetismo I
+        \item Circuitos Elétricos II
+    \end{itemize}
+
+
+    \subsection*{Avaliação da Aprendizagem}
+    A avaliação da aprendizagem será feita através de duas provas individuais e sem consulta ($P_1$ e $P_2$), e por um trabalho de
+    pesquisa ($T$) a ser apresentado na forma de seminário.
+    Os valores de referência para os pesos dessas avaliações e seus conteúdos são:
+    \begin{itemize}[itemsep=0mm]
+    \item[$P_1$:] (peso 40\%) transformadores elétricos
+    \item[$P_2$:] (peso 50\%) motores elétricos de indução
+    \item[$T$:] (peso 10\%) motores especiais
+    \end{itemize}
+
+    Segundas chamadas serão realizadas \textbf{exclusivamente} para os casos previstos no Art. 162 da RDP e deverão ser solicitadas diretamente à coordenação
+    do curso (e não ao professor que leciona a disciplina).
+
+    As avaliações serão individuais.
+    Respostas iguais de dois alunos ou \textbf{cópias} de livros ou internet, \textbf{mesmo que parciais} por fragmentos de textos ou figuras, \textbf{configuram plágio} e,
+    como consequência, será atribuída nota geral zero para a avaliação (de ambos os alunos).
+
+    Resultados numéricos errados, mesmo que com procedimentos parcialmente corretos, não pontuarão nas avaliações.
+
+    Resultados numéricos corretos, mas sem desenvolvimento de cálculo consistente não pontuarão nas avaliações.
+
+    Como previsto pelo regulamento didático--pedagógico do IFSC, para as duas provas ($P_1$ e $P_2$) serão realizadas recuperações ($R_1$ e $R_2$).
+    A nota a ser registrada será o maior valor entre a nota da prova e a de sua recuperação.
+
+    As notas de cada avaliação serão registradas em valores inteiros de 0 a 10, adotando critério de arredondamento da ABNT quando necessário.
+
+    A nota final será calculada pela média ponderada das avaliações:
+    %\vspace{-1mm} \[ M = 0.4 \cdot  \text{max}(P_1, R_1) + 0.5 \cdot  \text{max}(P_2, R_2) +  0.1 \cdot T \] \vspace{-1mm}
+    \[ M = \dfrac{4 \cdot  \max(P_1, R_1) + 5 \cdot  \max(P_2, R_2) +  T}{10} \]
+    e será registrada em valores inteiros de 0 a 10.
+    Valores para a média ponderada final iguais ou superiores a 5.5 poderão ser arredondados tanto para 5 como para 6, dependendo da participação e
+    desempenho do aluno nas atividades práticas de laboratório e demais atividades propostas.
+    Valores da média ponderada final inferiores a 5.5 serão arredondados para 5.
+
+    Será aprovado o aluno que atingir nota final \textbf{superior} ou \textbf{igual} a 6.
+
+    Adicionalmente, para aprovação, o aluno deverá acumular presença \textbf{superior} ou \textbf{igual} a 75\%.
+    Caso esse percentual mínimo não for atingido, o aluno estará \textbf{reprovado} e a ele será atribuída a nota \textbf{zero}.
+    Recomenda--se ao aluno o acompanhamento semanal dos registros de frequência pelo SIGAA.
+
+    %\nocite{*}
+    %\bibliography{main}
+    %\bibliographystyle{unsrt}
+
+    \subsection*{Atendimento Extraclasse}
+    Terças--feiras as 12:30 e quintas--feiras as 17:30 na sala G102b.
+
+    \subsection*{Bibliografia Básica}
+    \begin{enumerate}[label={[}\arabic*{]}, leftmargin=*, itemsep=-0mm]
+    \item Fitzgerald, A. E.; Kingsley, Charles Jr.; Umans, Stephen D. \emph{Máquinas Elétricas}. McGraw–Hill, $6^{\underline{\text{a}}}$ edição, 2006.
+    \item Chapman, Stephen. \emph{Fundamentos de Máquinas Elétricas}. McGraw–Hill, $5^{\underline{\text{a}}}$ edição, 2013.
+    \end{enumerate}
+
+    \subsection*{Bibliografia Complementar}
+    \begin{enumerate}[label={[}\arabic*{]}, resume, leftmargin=*, itemsep=0mm]
+    \item Kosow, Irwing L. \emph{Máquinas Elétricas e Transformadores}. Globo, $15^{\underline{\text{a}}}$ edição, 1996.
+    \item Toro, Vicent del. \emph{Fundamentos de Máquinas Elétricas}. LTC, $6^{\underline{\text{a}}}$ edição, 2006.
+    \item Wasynczuk, Oleg; Krause, Paul C.; Sudhoff, Scott D.; Pekarek, Steven. \emph{Analysis of Electrical
+Machinery and Drive Systems}. Willey, 2002.
+    \end{enumerate}
+
+    \subsection*{Calendário e Planejamento}
+
+    \newcommand{\feriado}[1]{\color{red!80}\sout{#1}}
+    \newcommand{\anp}[1]{\color{RoyalBlue}#1}
+    \newcommand{\pratica}[1]{\color{teal}#1}
+    \newcommand{\prova}[1]{\color{Purple}#1}
+    \newcommand{\extra}[1]{\color{Bittersweet}#1}
+    \newcommand{\seminario}[1]{\color{Rhodamine}#1}
+
+    \input{\conditionmacro}
+
+
+\end{document}

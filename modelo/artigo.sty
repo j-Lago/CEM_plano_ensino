@@ -1,0 +1,49 @@
+% modelo IFSC artigo
+\usepackage{../modelo/base/__base}
+
+%seção
+\sectionfont{\sectionrule{0ex}{0pt}{-1ex}{0.0pt}}
+\makeatletter \def\@seccntformat#1{\csname the#1\endcsname:\quad}
+
+
+
+
+%cabeçalho e rodapé
+%\renewcommand{\headrulewidth}{.5pt}
+\renewcommand{\footrulewidth}{.5pt}
+%\lhead{\includegraphics[scale=0.24]{../modelo/base/ifsc}\\ \noindent\rule[2ex]{\linewidth}{.50pt}}
+\lhead{\includegraphics[scale=0.16]{../modelo/base/ifsc} \includegraphics[scale=2.3]{../modelo/base/gepai} \noindent\rule[2ex]{\linewidth}{.50pt}}
+\chead{}
+\rhead{
+    \begin{minipage}{0.80\textwidth} \small
+        \begin{flushleft}
+            \@cabecalho
+        \end{flushleft}
+    \end{minipage}\\ \vspace{1.2mm}
+}
+
+\lfoot{\footnotesize{T\'itulo: \@shorttitle \\ Autor: \theauthor}}
+\cfoot{}
+\rfoot{\footnotesize{ \ \@date \\ P\'agina \thepage  \ de  \pageref{LastPage}}}
+\renewcommand{\headrulewidth}{0pt}
+
+
+
+\cabecalho{
+    \textsc{Grupo de Pesquisa em Eletrônica de Potência e Acionamentos Industriais} \\
+    \textsc{Instituto Federal de Educação, Ciência e Tecnologia de Santa Catarina} \\
+    \textsc{Campus Florianópolis --- Departamento Acadêmico de Eletrotécnica}
+}
+\newcommand{\capa}{
+    \begin{center}
+        \large\textbf{\@title} \\
+        \small\textbf{\@subtitle} \\
+        \vspace{4mm}
+    \end{center}
+
+    \pagestyle{fancy}
+
+    }
+
+
+
